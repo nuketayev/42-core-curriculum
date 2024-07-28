@@ -3,7 +3,6 @@
 void free_split(char **split)
 {
     size_t i = 0;
-
     if (!split)
         return;
     while (split[i])
@@ -42,17 +41,13 @@ int main(int argc, char **argv)
     t_stack_node *a = NULL;
     t_stack_node *b = NULL;
     char **split_argv = NULL;
-
     if (argc == 1 || (argc == 2 && !argv[1][0]))
         return (1);
-
     handle_split_argv(argc, argv, &a, &split_argv);
     sort_stack(&a, &b);
-
     free_stack(&a);
     free_stack(&b);
     if (split_argv)
         free_split(split_argv);
-
     return (0);
 }

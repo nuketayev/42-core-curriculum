@@ -1,9 +1,9 @@
 #include "push_swap.h"
 
-static t_list	*get_next_min(t_list **stack)
+static t_stack_node	*get_next_min(t_stack_node **stack)
 {
-	t_list	*head;
-	t_list	*min;
+	t_stack_node	*head;
+	t_stack_node	*min;
 	int		has_min;
 
 	min = NULL;
@@ -24,9 +24,9 @@ static t_list	*get_next_min(t_list **stack)
 	return (min);
 }
 
-void	index_stack(t_list **stack)
+void	index_stack(t_stack_node **stack)
 {
-	t_list	*head;
+	t_stack_node	*head;
 	int		index;
 
 	index = 0;

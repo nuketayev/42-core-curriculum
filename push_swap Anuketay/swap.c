@@ -1,9 +1,9 @@
 #include "push_swap.h"
 
-int	swap(t_list **stack)
+int	swap(t_stack_node **stack)
 {
-	t_list	*head;
-	t_list	*next;
+	t_stack_node	*head;
+	t_stack_node	*next;
 	int		tmp_val;
 	int		tmp_index;
 
@@ -22,7 +22,7 @@ int	swap(t_list **stack)
 	return (0);
 }
 
-int	sa(t_list **stack_a)
+int	sa(t_stack_node **stack_a)
 {
 	if (swap(stack_a) == 1)
 		return (1);
@@ -30,7 +30,7 @@ int	sa(t_list **stack_a)
 	return (0);
 }
 
-int	sb(t_list **stack_b)
+int	sb(t_stack_node **stack_b)
 {
 	if (swap(stack_b) == 1)
 		return (1);
@@ -38,7 +38,7 @@ int	sb(t_list **stack_b)
 	return (0);
 }
 
-int	ss(t_list **stack_a, t_list **stack_b)
+int	ss(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	if ((sa(stack_a) == 1 || sb(stack_b) == 1))
 		return (1);

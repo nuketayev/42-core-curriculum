@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	sort_4(t_list **stack_a, t_list **stack_b)
+void	sort_4(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	int	distance;
 
@@ -23,7 +23,7 @@ void	sort_4(t_list **stack_a, t_list **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	sort_5(t_list **stack_a, t_list **stack_b)
+void	sort_5(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	int	distance;
 

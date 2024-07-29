@@ -1,10 +1,10 @@
 #include "push_swap.h"
 
-t_list	*ft_listnew(int value)
+t_stack_node	*ft_listnew(int value)
 {
-	t_list	*new;
+	t_stack_node	*new;
 
-	new = (t_list *) malloc(sizeof(*new));
+	new = (t_stack_node *) malloc(sizeof(*new));
 	if (!new)
 		return (NULL);
 	new->value = value;
@@ -13,15 +13,15 @@ t_list	*ft_listnew(int value)
 	return (new);
 }
 
-void	ft_listadd_front(t_list **stack, t_list *new)
+void	ft_listadd_front(t_stack_node **stack, t_stack_node *new)
 {
 	new->next = *stack;
 	*stack = new;
 }
 
-t_list	*ft_listlast(t_list *head)
+t_stack_node	*ft_listlast(t_stack_node *head)
 {
-	t_list	*tmp;
+	t_stack_node	*tmp;
 
 	tmp = head;
 	while (tmp->next)
@@ -33,9 +33,9 @@ t_list	*ft_listlast(t_list *head)
 	return (tmp);
 }
 
-void	ft_listadd_back(t_list **stack, t_list *new)
+void	ft_listadd_back(t_stack_node **stack, t_stack_node *new)
 {
-	t_list	*n;
+	t_stack_node	*n;
 
 	if (*stack)
 	{
@@ -50,10 +50,10 @@ void	ft_listadd_back(t_list **stack, t_list *new)
 	}
 }
 
-int	ft_listsize(t_list *head)
+int	ft_listsize(t_stack_node *head)
 {
 	size_t	i;
-	t_list	*tmp;
+	t_stack_node	*tmp;
 
 	tmp = head;
 	i = 0;

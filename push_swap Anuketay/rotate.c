@@ -1,9 +1,9 @@
 #include "push_swap.h"
 
-int	rotate(t_list **stack)
+int	rotate(t_stack_node **stack)
 {
-	t_list	*head;
-	t_list	*tail;
+	t_stack_node	*head;
+	t_stack_node	*tail;
 
 	if (ft_listsize(*stack) < 2)
 		return (1);
@@ -15,7 +15,7 @@ int	rotate(t_list **stack)
 	return (0);
 }
 
-int	ra(t_list **stack_a)
+int	ra(t_stack_node **stack_a)
 {
 	if (rotate(stack_a) == 1)
 		return (1);
@@ -23,7 +23,7 @@ int	ra(t_list **stack_a)
 	return (0);
 }
 
-int	rb(t_list **stack_b)
+int	rb(t_stack_node **stack_b)
 {
 	if (rotate(stack_b) == 1)
 		return (1);
@@ -31,7 +31,7 @@ int	rb(t_list **stack_b)
 	return (0);
 }
 
-int	rr(t_list **stack_a, t_list **stack_b)
+int	rr(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	if ((ra(stack_a) == 1 || rb(stack_b) == 1))
 		return (1);

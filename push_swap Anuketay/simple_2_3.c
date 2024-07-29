@@ -1,8 +1,8 @@
 #include "push_swap.h"
 
-int	get_min(t_list **stack, int val)
+int	get_min(t_stack_node **stack, int val)
 {
-	t_list	*head;
+	t_stack_node	*head;
 	int		min;
 
 	head = *stack;
@@ -16,7 +16,7 @@ int	get_min(t_list **stack, int val)
 	return (min);
 }
 
-static void	sort_case_2(t_list **stack_a, int min)
+static void	sort_case_2(t_stack_node **stack_a, int min)
 {
 	if ((*stack_a)->next->index == min)
 		sa(stack_a);
@@ -24,7 +24,7 @@ static void	sort_case_2(t_list **stack_a, int min)
 		rra(stack_a);
 }
 
-static void	sort_case_3(t_list **stack_a, int min)
+static void	sort_case_3(t_stack_node **stack_a, int min)
 {
 	if ((*stack_a)->next->index == min)
 		ra(stack_a);
@@ -35,9 +35,9 @@ static void	sort_case_3(t_list **stack_a, int min)
 	}
 }
 
-void	sort_3(t_list **stack_a)
+void	sort_3(t_stack_node **stack_a)
 {
-	t_list	*head;
+	t_stack_node	*head;
 	int		min;
 	int		next_min;
 
@@ -58,7 +58,7 @@ void	sort_3(t_list **stack_a)
 		sort_case_3(stack_a, min);
 }
 
-void	simple_sort(t_list **stack_a, t_list **stack_b)
+void	simple_sort(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	int	size;
 

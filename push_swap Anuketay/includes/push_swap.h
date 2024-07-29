@@ -39,7 +39,7 @@ int		calculate_disctance(t_stack_node **stack, int index);
 void	free_stack(t_stack_node **stack);
 void	ft_free(char **str);
 
-void	stack_sort(t_stack_node **stack_a, t_stack_node **stack_b);
+void	quick_sort(t_stack_node **stack_a, t_stack_node **stack_b);
 
 int		swap(t_stack_node **stack);
 int		push(t_stack_node **stack_to, t_stack_node **stack_from);

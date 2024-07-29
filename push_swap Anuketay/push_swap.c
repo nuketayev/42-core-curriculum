@@ -10,7 +10,7 @@ static void	sort_stack(t_stack_node **stack_a, t_stack_node **stack_b)
 	if (size <= 5)
 		five_nb_sort(stack_a, stack_b, size);
 	else
-		stack_sort(stack_a, stack_b);
+		quick_sort(stack_a, stack_b);
 }
 
 int	main(int argc, char **argv)

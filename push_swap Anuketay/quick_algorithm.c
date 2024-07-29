@@ -1,6 +1,6 @@
 #include "includes/push_swap.h"
 
-static int	get_max_bits(t_stack_node **stack)
+static int	calculate_max_bits(t_stack_node **stack)
 {
 	t_stack_node	*head;
 	int		max;
@@ -20,7 +20,7 @@ static int	get_max_bits(t_stack_node **stack)
 	return (max_bits);
 }
 
-void	stack_sort(t_stack_node **stack_a, t_stack_node **stack_b)
+void	quick_sort(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	t_stack_node	*head_a;
 	int		i;
@@ -31,7 +31,7 @@ void	stack_sort(t_stack_node **stack_a, t_stack_node **stack_b)
 	i = 0;
 	head_a = *stack_a;
 	size = ft_listsize(head_a);
-	max_bits = get_max_bits(stack_a);
+	max_bits = calculate_max_bits(stack_a);
 	while (i < max_bits)
 	{
 		j = 0;

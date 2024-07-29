@@ -1,5 +1,17 @@
 #include "includes/push_swap.h"
 
+static int	ft_duplicate(int num, char **argv, int i)
+{
+	i++;
+	while (argv[i])
+	{
+		if (ft_atol(argv[i]) == num)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 static int	ft_isnum(char *num)
 {
 	int	i;
@@ -14,18 +26,6 @@ static int	ft_isnum(char *num)
 		i++;
 	}
 	return (1);
-}
-
-static int	ft_duplicate(int num, char **argv, int i)
-{
-	i++;
-	while (argv[i])
-	{
-		if (ft_atol(argv[i]) == num)
-			return (1);
-		i++;
-	}
-	return (0);
 }
 
 void	handle_errors(int argc, char **argv)

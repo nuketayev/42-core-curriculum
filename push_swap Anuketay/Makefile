@@ -6,9 +6,9 @@ NAME         = push_swap
 CC           = cc
 FLAGS        = -Wall -Werror -Wextra -g
 SRC          = arg_check.c utils.c ft_list.c instructions/push.c \
-               instructions/reverse_rotate.c instructions/rotate.c simple_2_3.c \
-               simple_4_5.c stack_sort.c stack_index.c \
-               instructions/swap.c push_swap.c \
+               instructions/reverse_rotate.c instructions/rotate.c five_sort/snb_sort.c \
+               five_sort/ffnb_sort.c five_sort/five_nb_sort.c stack_sort.c stack_index.c \
+               instructions/swap.c push_swap.c is_sorted.c \
 
 OBJ          = $(SRC:.c=.o)
 

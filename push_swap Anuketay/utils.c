@@ -18,18 +18,19 @@ void ft_free(char **str)
     free(str);
 }
 
-int	is_sorted(t_stack_node **stack)
+void	free_stack(t_stack_node **stack)
 {
 	t_stack_node	*head;
+	t_stack_node	*tmp;
 
 	head = *stack;
-	while (head && head->next)
+	while (head)
 	{
-		if (head->value > head->next->value)
-			return (0);
+		tmp = head;
 		head = head->next;
+		free(tmp);
 	}
-	return (1);
+	free(stack);
 }
 
 int	get_distance(t_stack_node **stack, int index)
@@ -49,17 +50,3 @@ int	get_distance(t_stack_node **stack, int index)
 	return (distance);
 }
 
-void	free_stack(t_stack_node **stack)
-{
-	t_stack_node	*head;
-	t_stack_node	*tmp;
-
-	head = *stack;
-	while (head)
-	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
-	}
-	free(stack);
-}

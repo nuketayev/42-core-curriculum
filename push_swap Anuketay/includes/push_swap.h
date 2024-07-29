@@ -23,11 +23,11 @@ t_stack_node	*ft_listlast(t_stack_node *head);
 void	ft_listadd_back(t_stack_node **stack, t_stack_node *new);
 int		ft_listsize(t_stack_node *head);
 
-int		get_min(t_stack_node **stack, int val);
-void	sort_3(t_stack_node **stack_a);
-void	sort_4(t_stack_node **stack_a, t_stack_node **stack_b);
-void	sort_5(t_stack_node **stack_a, t_stack_node **stack_b);
-void	simple_sort(t_stack_node **stack_a, t_stack_node **stack_b);
+int		find_smallest(t_stack_node **stack, int val);
+void	sort_three_numbers(t_stack_node **stack_a);
+void	sort_four_numbers(t_stack_node **stack_a, t_stack_node **stack_b);
+void	sort_five_numbers(t_stack_node **stack_a, t_stack_node **stack_b);
+void	five_nb_sort(t_stack_node **stack_a, t_stack_node **stack_b, int size);
 
 void	ft_error(char *msg);
 void	ft_check_args(int argc, char **argv);

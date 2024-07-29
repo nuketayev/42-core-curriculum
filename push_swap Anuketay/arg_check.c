@@ -1,15 +1,10 @@
 #include "includes/push_swap.h"
 
-static int	ft_duplicate(int num, char **argv, int i)
+void	error_n_free(char **args, int is_allocated)
 {
-	i++;
-	while (argv[i])
-	{
-		if (ft_atol(argv[i]) == num)
-			return (1);
-		i++;
-	}
-	return (0);
+	if (is_allocated)
+		ft_free(args);
+	ft_error("Error");
 }
 
 static int	ft_isnum(char *num)
@@ -28,11 +23,16 @@ static int	ft_isnum(char *num)
 	return (1);
 }
 
-void	error_n_free(char **args, int is_allocated)
+static int	ft_duplicate(int num, char **argv, int i)
 {
-	if (is_allocated)
-		ft_free(args);
-	ft_error("Error");
+	i++;
+	while (argv[i])
+	{
+		if (ft_atol(argv[i]) == num)
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
 void	arg_check(int argc, char **argv)

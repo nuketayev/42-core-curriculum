@@ -1,21 +1,5 @@
 #include "../includes/push_swap.h"
 
-int	find_smallest(t_stack_node **stack, int val)
-{
-	t_stack_node	*top;
-	int		min;
-
-	top = *stack;
-	min = top->index;
-	while (top->next)
-	{
-		top = top->next;
-		if ((top->index < min) && top->index != val)
-			min = top->index;
-	}
-	return (min);
-}
-
 static void	sort_three_numbers_2(t_stack_node **stack_a, int min)
 {
 	if ((*stack_a)->next->index == min)

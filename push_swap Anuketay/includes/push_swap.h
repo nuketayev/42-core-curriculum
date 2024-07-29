@@ -17,6 +17,7 @@ void	error_n_free(char **args, int is_allocated);
 void	ft_error(char *msg);
 void	ft_free(char **str);
 void	index_stack(t_stack_node **stack);
+void	init_new_stack(t_stack_node **stack, int argc, char **argv);
 
 t_stack_node	*ft_listnew(int value);
 void	ft_listadd_front(t_stack_node **stack, t_stack_node *new);
@@ -25,6 +26,7 @@ void	ft_listadd_back(t_stack_node **stack, t_stack_node *new);
 int		ft_listsize(t_stack_node *head);
 
 int		find_smallest(t_stack_node **stack, int val);
+t_stack_node	*get_next_min(t_stack_node **stack);
 void	sort_three_numbers(t_stack_node **stack_a);
 void	sort_four_numbers(t_stack_node **stack_a, t_stack_node **stack_b);
 void	sort_five_numbers(t_stack_node **stack_a, t_stack_node **stack_b);

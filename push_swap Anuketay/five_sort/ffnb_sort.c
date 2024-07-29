@@ -6,7 +6,7 @@ void	sort_four_numbers(t_stack_node **stack_a, t_stack_node **stack_b)
 
 	if (is_sorted(stack_a))
 		return ;
-	distance = get_distance(stack_a, find_smallest(stack_a, -1));
+	distance = calculate_disctance(stack_a, find_smallest(stack_a, -1));
 	if (distance == 1)
 		ra(stack_a);
 	else if (distance == 2)
@@ -27,7 +27,7 @@ void	sort_five_numbers(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	int	distance;
 
-	distance = get_distance(stack_a, find_smallest(stack_a, -1));
+	distance = calculate_disctance(stack_a, find_smallest(stack_a, -1));
 	if (distance == 1)
 		ra(stack_a);
 	else if (distance == 2)

@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-	arg_check(argc, argv);
+	handle_errors(argc, argv);
 	stack_a = (t_stack_node **)malloc(sizeof(t_stack_node));
 	stack_b = (t_stack_node **)malloc(sizeof(t_stack_node));
 	*stack_a = NULL;

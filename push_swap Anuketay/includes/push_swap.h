@@ -12,7 +12,8 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-void	arg_check(int argc, char **argv);
+void	handle_errors(int argc, char **argv);
+void	error_n_free(char **args, int is_allocated);
 void	ft_error(char *msg);
 void	ft_free(char **str);
 void	index_stack(t_stack_node **stack);
@@ -32,7 +33,7 @@ void	five_nb_sort(t_stack_node **stack_a, t_stack_node **stack_b, int size);
 void	ft_error(char *msg);
 void	ft_check_args(int argc, char **argv);
 int		is_sorted(t_stack_node **stack);
-int		get_distance(t_stack_node **stack, int index);
+int		calculate_disctance(t_stack_node **stack, int index);
 void	free_stack(t_stack_node **stack);
 void	ft_free(char **str);
 

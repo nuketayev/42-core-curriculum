@@ -6,6 +6,13 @@ void	ft_error(char *msg)
 	exit(0);
 }
 
+void	error_n_free(char **args, int is_allocated)
+{
+	if (is_allocated)
+		ft_free(args);
+	ft_error("Error");
+}
+
 void ft_free(char **str)
 {
     int i;
@@ -32,21 +39,3 @@ void	free_stack(t_stack_node **stack)
 	}
 	free(stack);
 }
-
-int	get_distance(t_stack_node **stack, int index)
-{
-	t_stack_node	*head;
-	int		distance;
-
-	distance = 0;
-	head = *stack;
-	while (head)
-	{
-		if (head->index == index)
-			break ;
-		distance++;
-		head = head->next;
-	}
-	return (distance);
-}
-

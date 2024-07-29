@@ -16,7 +16,7 @@ static void	create_stack(t_list **stack, int argc, char **argv)
 	}
 	while (args[i])
 	{
-		new = ft_listnew(ft_atoi(args[i]));
+		new = ft_listnew(ft_atol(args[i]));
 		ft_listadd_back(stack, new);
 		i++;
 	}
@@ -38,11 +38,8 @@ int	main(int argc, char **argv)
 	t_list	**stack_a;
 	t_list	**stack_b;
 
-	if (argc < 2)
+	if (argc > 1)
 	{
-		ft_error("Error");
-		return (1);
-	}
 	arg_check(argc, argv);
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	stack_b = (t_list **)malloc(sizeof(t_list));
@@ -50,7 +47,7 @@ int	main(int argc, char **argv)
 	*stack_b = NULL;
 	create_stack(stack_a, argc, argv);
 	while(1)
-{
+	{
 		if (is_sorted(stack_a))
 		{
 			free_stack(stack_a);
@@ -59,6 +56,7 @@ int	main(int argc, char **argv)
 		}
 		else
 			sort_stack(stack_a, stack_b);
+	}
 	}
 	return (0);
 }

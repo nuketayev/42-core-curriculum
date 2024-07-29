@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 AR = ar
 
-SRC = ft_atoi.c ft_split.c \
+SRC = ft_atol.c ft_split.c \
 	ft_strchr.c ft_substr.c ft_putstr_fd.c \
 	ft_isdigit.c ft_strlen.c ft_strdup.c \
 	ft_putendl_fd.c ft_putchar_fd.c \

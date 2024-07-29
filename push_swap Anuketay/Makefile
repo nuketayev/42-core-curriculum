@@ -5,10 +5,10 @@ LIBFT        = $(LIBFT_DIR)$(LIBFT_NAME)
 NAME         = push_swap
 CC           = cc
 FLAGS        = -Wall -Werror -Wextra -g
-SRC          = arg_check.c utils.c ft_list.c push.c \
-               reverse_rotate.c rotate.c simple_2_3.c \
+SRC          = arg_check.c utils.c ft_list.c instructions/push.c \
+               instructions/reverse_rotate.c instructions/rotate.c simple_2_3.c \
                simple_4_5.c stack_sort.c stack_index.c \
-               swap.c push_swap.c \
+               instructions/swap.c push_swap.c \
 
 OBJ          = $(SRC:.c=.o)
 

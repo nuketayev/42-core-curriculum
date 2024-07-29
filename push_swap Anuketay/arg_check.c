@@ -1,5 +1,4 @@
-#include "push_swap.h"
-#include <limits.h>
+#include "includes/push_swap.h"
 
 static int	ft_duplicate(int num, char **argv, int i)
 {

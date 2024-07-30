@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free_error.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anuketay <anuketay@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/30 19:17:23 by anuketay          #+#    #+#             */
+/*   Updated: 2024/07/30 19:34:18 by anuketay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
 void	ft_error(char *msg)
@@ -13,16 +25,16 @@ void	error_n_free(char **args, int is_allocated)
 	ft_error("Error");
 }
 
-void ft_free(char **str)
+void	ft_free(char **str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    while (i > 0)
-        free(str[--i]);
-    free(str);
+	i = 0;
+	while (str[i])
+		i++;
+	while (i > 0)
+		free(str[--i]);
+	free(str);
 }
 
 void	free_stack(t_stack_node **stack)

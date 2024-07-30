@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   snb_sort.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anuketay <anuketay@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/30 19:18:54 by anuketay          #+#    #+#             */
+/*   Updated: 2024/07/30 19:41:21 by anuketay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 static void	sort_three_numbers_2(t_stack_node **stack_a, int min)
@@ -22,8 +34,8 @@ static void	sort_three_numbers_3(t_stack_node **stack_a, int min)
 void	sort_three_numbers(t_stack_node **stack_a)
 {
 	t_stack_node	*top;
-	int		min;
-	int		next_min;
+	int				min;
+	int				next_min;
 
 	top = *stack_a;
 	min = find_smallest(stack_a, -1);

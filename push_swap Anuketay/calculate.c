@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   calculate.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anuketay <anuketay@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/30 19:17:16 by anuketay          #+#    #+#             */
+/*   Updated: 2024/07/30 19:35:45 by anuketay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
 int	find_smallest(t_stack_node **stack, int val)
 {
 	t_stack_node	*top;
-	int		min;
+	int				min;
 
 	top = *stack;
 	min = top->index;
@@ -20,7 +32,7 @@ t_stack_node	*get_next_min(t_stack_node **stack)
 {
 	t_stack_node	*head;
 	t_stack_node	*min;
-	int		has_min;
+	int				has_min;
 
 	min = NULL;
 	has_min = 0;
@@ -43,7 +55,7 @@ t_stack_node	*get_next_min(t_stack_node **stack)
 int	calculate_disctance(t_stack_node **stack, int index)
 {
 	t_stack_node	*head;
-	int		distance;
+	int				distance;
 
 	distance = 0;
 	head = *stack;

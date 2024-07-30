@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anuketay <anuketay@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/30 19:17:34 by anuketay          #+#    #+#             */
+/*   Updated: 2024/07/30 19:30:30 by anuketay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
 t_stack_node	*ft_listnew(int value)
 {
 	t_stack_node	*new;
 
-	new = (t_stack_node *) malloc(sizeof(*new));
+	new = (t_stack_node *)malloc(sizeof(*new));
 	if (!new)
 		return (NULL);
 	new->value = value;
@@ -52,7 +64,7 @@ void	ft_listadd_back(t_stack_node **stack, t_stack_node *new)
 
 int	ft_listsize(t_stack_node *head)
 {
-	size_t	i;
+	size_t			i;
 	t_stack_node	*tmp;
 
 	tmp = head;

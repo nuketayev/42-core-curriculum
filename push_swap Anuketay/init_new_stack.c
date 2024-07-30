@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_new_stack.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anuketay <anuketay@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/30 19:17:58 by anuketay          #+#    #+#             */
+/*   Updated: 2024/07/30 19:36:57 by anuketay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
 void	index_stack(t_stack_node **stack)
 {
 	t_stack_node	*head;
-	int		index;
+	int				index;
 
 	index = 0;
 	head = get_next_min(stack);
@@ -17,8 +29,8 @@ void	index_stack(t_stack_node **stack)
 void	init_new_stack(t_stack_node **stack, int argc, char **argv)
 {
 	t_stack_node	*new;
-	char	**temp;
-	int		a;
+	char			**temp;
+	int				a;
 
 	a = 0;
 	if (argc == 2)

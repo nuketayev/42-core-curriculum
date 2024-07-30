@@ -7,7 +7,7 @@ CC           = cc
 FLAGS        = -Wall -Werror -Wextra -g
 SRC          = handle_errors.c free_error.c ft_list.c instructions/push.c \
                instructions/reverse_rotate.c instructions/rotate.c five_sort/snb_sort.c \
-               five_sort/ffnb_sort.c five_sort/five_nb_sort.c quick_algorithm.c \
+               five_sort/ffnb_sort.c five_sort/five_nb_sort.c big_stack_sort.c \
                instructions/swap.c push_swap.c init_new_stack.c is_sorted.c calculate.c\
 
 OBJ          = $(SRC:.c=.o)

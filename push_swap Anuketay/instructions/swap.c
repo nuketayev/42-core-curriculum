@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anuketay <anuketay@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/30 19:18:37 by anuketay          #+#    #+#             */
+/*   Updated: 2024/07/30 19:41:57 by anuketay         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 int	swap(t_stack_node **stack)
 {
 	t_stack_node	*head;
 	t_stack_node	*next;
-	int		tmp_val;
-	int		tmp_index;
+	int				tmp_val;
+	int				tmp_index;
 
 	if (ft_listsize(*stack) < 2)
 		return (1);

@@ -1,5 +1,34 @@
 # Push Swap
 
+## Usage
+
+To clone the repository and use the program, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone <repository_url>
+   ```
+
+2. Navigate to the project directory:
+   ```sh
+   cd push_swap
+   ```
+
+3. Build the project:
+   ```sh
+   make
+   ```
+
+4. Run the program:
+   ```sh
+   ./push_swap <list_of_numbers>
+   ```
+
+   Example:
+   ```sh
+   ./push_swap 4 2 3 1
+   ```
+
 ## Project Rules
 
 The program is composed of 2 stacks named `a` and `b`.
